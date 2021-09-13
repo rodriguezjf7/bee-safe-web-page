@@ -15,15 +15,56 @@
     max-width: 100%;
     background: #FDEA00;
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
+   position: sticky;
 }
 
 #desingLogo{
-    width: 150px;
+    width: 110px;
     height: auto;
     background: red;
-    margin: 5vh 5vh;
+    margin: 3vh 3vh;
     display: inline-flex;
     justify-content: center;
     
 }
+
+#hexagono {
+    width: 35px;
+    height: 70px;
+    margin: 3vh 6vh;
+    position: relative;
+    background: #FDC200;
+   
+  }
+  #hexagono:before {
+    position: absolute;
+    border-bottom:16px solid #FDC200;
+    border-right:35px solid transparent;    
+    border-left:35px solid transparent;
+    content: '';
+    width: 0;
+    height:0;
+    left: 8px;
+    right: 0;
+    top: 27.5px;
+    
+    transform: rotate(90deg);
+  }
+  #hexagono:after {
+    position: absolute;
+    border-top: 16px solid #FDC200;
+    border-right:35px solid transparent;
+    border-left:35px solid transparent;
+    content: '';
+    width: 0;
+    height:0;
+    left: -43px;
+    right: 0;
+    top: 27.5px;   
+    transform: rotate(90deg);
+  }
+
+  .itembar{
+      background: purple;
+  }
