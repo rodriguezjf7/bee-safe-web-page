@@ -1,5 +1,28 @@
-document.addEventListener("DOMContentLoaded", function(e)){
+document.addEventListener("DOMContentLoaded", function(e){
 
-    document.querySelectorAll('.descripcion-header-efectos')
+    const parrafos = document.querySelectorAll('.AQUI VA LA CLASE');
 
-}
+    let alturas = [];
+    let alturaMaxima = 0;
+
+    const aplicarAlturas = (function aplicarAlturas(){
+
+        parrafos.forEach(parrafo =>{
+
+            if(alturaMaxima = 0){
+                alturas.push(parrafo.clientHeight);    
+            }else{
+                parrafo.style.height = alturaMaxima + "px";
+            }
+
+        });
+
+        return aplicarAlturas;
+
+    })();
+     
+    alturaMaxima = Math.max.apply(Math, alturas);
+
+    aplicarAlturas();
+
+});
